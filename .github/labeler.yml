@@ -1,0 +1,23 @@
+# Label PRs based on file paths
+
+java:
+  - '**/*.java'
+
+python:
+  - '**/*.py'
+
+c_cpp:
+  - '**/*.c'
+  - '**/*.cpp'
+
+invalid-folder-name:
+  - '**/* *'     # Files or folders with spaces
+
+arrays:
+  - 'Arrays/**'
+
+linkedlist:
+  - 'LinkedList/**'
+
+contribution:
+  - '**/README.md'
