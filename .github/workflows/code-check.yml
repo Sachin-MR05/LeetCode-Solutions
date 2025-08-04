@@ -1,0 +1,51 @@
+name: 🔍 Multi-Language Code Check
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  check-code:
+    name: Check Java, C, and Python Code
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Compile Java Files
+        run: |
+          echo "🔍 Checking Java files..."
+          find . -name "*.java" > java-files.txt
+          if [ -s java-files.txt ]; then
+            javac @java-files.txt
+            echo "✅ Java compilation successful!"
+          else
+            echo "ℹ️ No Java files found."
+          fi
+
+      - name: Compile C/C++ Files
+        run: |
+          echo "🔍 Checking C/C++ files..."
+          find . -name "*.c" -o -name "*.cpp" > c-files.txt
+          while read file; do
+            gcc "$file" -o /tmp/test.out || { echo "❌ C/C++ compilation failed in $file"; exit 1; }
+          done < c-files.txt
+          echo "✅ C/C++ compilation successful!"
+
+      - name: Check Python Syntax
+        run: |
+          echo "🔍 Checking Python files..."
+          find . -name "*.py" > py-files.txt
+          while read file; do
+            python3 -m py_compile "$file" || { echo "❌ Python syntax error in $file"; exit 1; }
+          done < py-files.txt
+          echo "✅ Python syntax check passed!"
