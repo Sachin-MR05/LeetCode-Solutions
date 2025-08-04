@@ -1,4 +1,4 @@
-# 🚀 LeetCode DSA Solutions by Sachin MR
+# 🚀 LeetCode DSA Solutions
 
 Welcome to my personal repository of **LeetCode Data Structures & Algorithms** solutions in multiple programming languages!
 
