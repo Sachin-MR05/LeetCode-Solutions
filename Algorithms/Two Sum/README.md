@@ -68,29 +68,23 @@ class Solution {
         return arr; // fallback, though LeetCode guarantees one solution
     }
 }
-📊 Submission Stats
-✅ All 63/63 testcases passed
+```` 
+---
+## 🤝 Want to Contribute?
 
-🕓 Runtime: 33 ms — Beats 48.66%
+Found a better solution? Want to improve time/space complexity or add a different language?
 
-🧠 Memory: 44.62 MB — Beats 95.50%
+✅ Create a Pull Request — I accept:
 
-📅 Submitted by: Sachin MR on Sep 16, 2024, 11:15 PM
+- Clean solutions in any programming language
+- Optimized or faster versions of existing code
+- Well-commented code or visual explanations
+- Additional test cases
+- Bug fixes or logic improvements
 
-🤝 Want to Contribute?
-✨ Found a better solution? Want to improve time/space complexity or add a different language?
+All valid contributions are welcome and you will get full credit in the commit and PR history.
 
-✅ Create a PR — I accept:
+Let's build a helpful LeetCode community together!
 
-Clean solutions in any language
-
-Better performance versions
-
-Helpful comments or visualizations
-
-Test case additions or debugging help
-
-You’ll get full credit in commits and PR history. Let’s build an amazing LeetCode community together 💙
-
-Happy Coding & Keep Solving! 🚀
+Happy Coding and Keep Solving!  
 — Sachin MR
