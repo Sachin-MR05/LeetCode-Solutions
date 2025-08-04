@@ -68,7 +68,16 @@ class Solution {
         return arr; // fallback, though LeetCode guarantees one solution
     }
 }
-```` 
+````
+---
+##📊 Submission Stats
+✅ All 63/63 testcases passed
+
+🕓 Runtime: 33 ms — Beats 48.66%
+
+🧠 Memory: 44.62 MB — Beats 95.50%
+
+📅 Submitted by: Sachin MR on Sep 16, 2024, 11:15 PM
 ---
 ## 🤝 Want to Contribute?
 
