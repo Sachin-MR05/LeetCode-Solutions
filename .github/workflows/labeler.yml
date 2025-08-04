@@ -1,0 +1,14 @@
+name: 🤖 Auto PR Labeler
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Labeler
+        uses: actions/labeler@v5.0.0
+        with:
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
